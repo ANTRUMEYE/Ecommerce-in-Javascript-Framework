@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkout</title>
+<meta charset="utf-8" />
+<meta name="viewpoint" content="width=device-width,initial-scal=1.0">
+<meta http-equip="X-UA-compatible" content="ie=edge">
+<link rel="stylesheet" href="style.css" media="screen" type="text/css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.store.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<section id="nav-bar">
+		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: green;">
+  		
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="pull-right" >
+  		<a style="color:white; font-size: 30px;" href="index.html">Ecommerce Website</a>
+		</div> 
+  		<div class="collapse navbar-collapse" id="navbarNav">
+  		
+    		<ul class="navbar-nav ml-auto">
+    		 <li class="nav-item">
+        		<a style="color:white;" class="nav-link" href="index.html">Home</a>
+      		</li>
+    		 <li class="nav-item">
+        		<a style="color:white;" class="nav-link" href="product.html">Products</a>
+      		</li>
+      		<li class="nav-item">
+        		<a style="color:white;" class="nav-link" href="cart.html">Cart</a>
+			
+      		</li>
+      		
+      		
+      		<li class="nav-item">
+        		<a style="color:white;" class="nav-link" href="aboutus.html">About Us</a>
+      		</li>
+      		
+      		<li class="nav-item">
+        		<a style="color:white;" class="nav-link" href="services.html">Our Services</a>
+      		</li>
+      		
+      		<li class="nav-item">
+        		<a style="color:white;" class="nav-link" href="team.html" tabindex="-1" aria-disabled="true">Our Team</a>
+      		</li>
+      		<li class="nav-item">
+        		<a style="color:white;" class="nav-link" href="contact.html">Contact</a>
+      		</li>
+      		
+      		
+    		</ul>
+  		</div>
+		</nav>
+</section>
+<body id="checkout-page">
+
+<div id="site">
+	
+	<div id="content">
+		<h1>Checkout</h1>
+			<table id="checkout-cart" class="shopping-cart">
+			  <thead>
+				<tr>
+					<th scope="col">Item</th>
+					<th scope="col">Qty</th>
+					<th scope="col">Price</th>
+				</tr>
+			  </thead>
+			  <tbody>
+			  
+			  </tbody>
+			</table>
+		 <div id="pricing">
+			
+			<p id="shipping">
+				<strong>Shipping</strong>: <span id="sshipping"></span>
+			</p>
+			
+			<p id="sub-total">
+				<strong>Total</strong>: <span id="stotal"></span>
+			</p>
+		 </div>
+		 
+		 <form action="order.html" method="post" id="checkout-order-form" style="background-color: skyblue">
+		 	<h2>Your Details</h2>
+		 	
+		 	<fieldset id="fieldset-billing">
+		 		<legend>Billing</legend>
+		 		<div>
+		 			<label for="name">Name</label>
+		 			<input type="text" name="name" id="name" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="email">Email</label>
+		 			<input type="text" name="email" id="email" data-type="expression" data-message="Not a valid email address" />
+		 		</div>
+		 		<div>
+		 			<label for="city">City</label>
+		 			<input type="text" name="city" id="city" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="address">Address</label>
+		 			<input type="text" name="address" id="address" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="zip">ZIP Code</label>
+		 			<input type="text" name="zip" id="zip" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="country">Location</label>
+		 			<select name="country" id="country" data-type="string" data-message="This field cannot be empty">
+		 				<option value="">Select</option>
+		 				<option value="De">Manila City</option>
+		 				<option value="IN">Baguio City</option>
+		 				<option value="IN">Marikina City</option>
+		 				<option value="IN">Bacolod City</option>
+		 				<option value="IN">Kabankalan City</option>
+		 			</select>
+		 		</div>
+		 	</fieldset>
+		 	
+		 	<div id="shipping-same">Same as Billing <input type="checkbox" id="same-as-billing" value=""/></div>
+		 	
+		 	<fieldset id="fieldset-shipping">
+		 		
+		 		<legend>Shipping</legend>
+		 		
+		 		<div>
+		 			<label for="sname">Name</label>
+		 			<input type="text" name="sname" id="sname" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="semail">Email</label>
+		 			<input type="text" name="semail" id="semail" data-type="expression" data-message="Not a valid email address" />
+		 		</div>
+		 		<div>
+		 			<label for="scity">City</label>
+		 			<input type="text" name="scity" id="scity" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="saddress">Address</label>
+		 			<input type="text" name="saddress" id="saddress" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="szip">ZIP Code</label>
+		 			<input type="text" name="szip" id="szip" data-type="string" data-message="This field cannot be empty" />
+		 		</div>
+		 		<div>
+		 			<label for="scountry">Location</label>
+		 			<select name="scountry" id="scountry" data-type="string" data-message="This field cannot be empty">
+		 				<option value="">Select</option>
+		 				
+		 				<option value="De">Manila City</option>
+		 				<option value="IN">Baguio City</option>
+		 				<option value="IN">Marikina City</option>
+		 				<option value="IN">Bacolod City</option>
+		 				<option value="IN">Kabankalan City</option>
+		 			</select>
+		 		</div>
+		 	</fieldset>
+		 	
+		 	<center><p><input type="submit" id="submit-order" value="Submit" class="btn btn-success" /></p></center>
+		 
+		 </form>
+	</div>
+	
+	
+
+</div>
+
+<footer id="site-info">
+		Copyright &copy;
+	</footer>
+
+</body>
+</html>	
+
+    
+
